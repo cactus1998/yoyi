@@ -984,6 +984,7 @@ body .mountain .mask3 {
 .process .titlebox h1 {
   font-size: 95px;
   letter-spacing: 30px;
+  margin-top: -115px;
   text-align: center;
   font-weight: normal;
   color: #707070;
@@ -1079,7 +1080,7 @@ body .mountain .mask3 {
   font-size: 80px;
   color: #707070;
   font-family: KouzanBrushFont;
-  margin-top: -70px;
+  margin-top: -115px;
   font-weight: normal;
   text-align: right;
 }
@@ -1164,7 +1165,7 @@ body .mountain .mask3 {
   color: #707070;
   font-family: KouzanBrushFont;
   font-weight: normal;
-  margin-top: -70px;
+  margin-top: -115px;
   text-align: left;
   padding-left: 50px;
 }
@@ -1200,7 +1201,7 @@ body .mountain .mask3 {
   }
   .process .process01box .fontbox_01 h1 {
     font-size: 70px;
-    margin-top: -50px;
+    margin-top: -100px;
     width: 100%;
   }
   .process .process01box .fontbox_01 .font01 {
@@ -1215,7 +1216,7 @@ body .mountain .mask3 {
   }
   .process .process02box .fontbox_02 h1 {
     font-size: 70px;
-    margin-top: -50px;
+    margin-top: -100px;
   }
   .process .process02box .fontbox_02 .font02 {
     font-size: 20px;
@@ -1261,7 +1262,7 @@ body .mountain .mask3 {
     font-size: 50px;
     margin: auto;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -90px;
   }
   .process .process01box .fontbox_01 .font01 {
     margin: auto;
@@ -1315,7 +1316,7 @@ body .mountain .mask3 {
     font-size: 50px;
     margin: auto;
     text-align: center;
-    margin-top: -50px;
+    margin-top: -95px;
     padding-left: 0px;
     margin-left: -30px;
   }
