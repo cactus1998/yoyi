@@ -1167,7 +1167,7 @@ body {
         h1 {
             font-size: 95px;
             letter-spacing: 30px;
-            margin-top: -115px;
+
             text-align: center;
             font-weight: normal;
             color: #707070;
@@ -1420,13 +1420,16 @@ body {
 
             h1 {
                 font-size: 55px;
-                margin: auto;
+                margin: 100px;
                 letter-spacing: 5px;
             }
 
             h2 {
                 display: none;
             }
+        }
+        .bar{
+            margin-top: 100px;
         }
 
         .process01box {

@@ -984,7 +984,6 @@ body .mountain .mask3 {
 .process .titlebox h1 {
   font-size: 95px;
   letter-spacing: 30px;
-  margin-top: -115px;
   text-align: center;
   font-weight: normal;
   color: #707070;
@@ -1229,11 +1228,14 @@ body .mountain .mask3 {
   }
   .process .titlebox h1 {
     font-size: 55px;
-    margin: auto;
+    margin: 100px;
     letter-spacing: 5px;
   }
   .process .titlebox h2 {
     display: none;
+  }
+  .process .bar {
+    margin-top: 100px;
   }
   .process .process01box {
     -webkit-box-orient: vertical;
