@@ -16,8 +16,11 @@ body .box {
 
 @font-face {
   body {
-    font-family: "KouzanBrushFont";
-    src: url(../fonts/字體/毛筆字體.ttf);
+    font-family: KouzanBrushFont;
+    src: url(../font/KouzanBrushFont.ttf);
+    src: url(../font/KouzanBrushFont.ttf) format(otf);
+    font-weight: normal;
+    font-style: normal;
   }
 }
 

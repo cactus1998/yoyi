@@ -30,6 +30,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: KouzanBrushFont;
+    src: url(../font/KouzanBrushFont.ttf);
+    src: url(../font/KouzanBrushFont.ttf) format(otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: Noto_Sans;
     src: url(../font/Noto_Sans_TC/NotoSansTC-Bold.otf);
 }
@@ -41,6 +48,9 @@
 }
 .HelveticaNeue {
     font-family: 'HelveticaNeue';
+}
+.KouzanBrushFont {
+    font-family: 'KouzanBrushFont';
 }
 
 
@@ -58,7 +68,7 @@
 
 /* banner */
 .banner_bg {
-    background-image: url(../img/banner_768.png);
+    background-image: url(../img/banner_768-2.png);
 }
 @media (min-width: 768px) {
     .banner_bg {
