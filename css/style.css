@@ -739,6 +739,10 @@ body .mountain .mask2 {
   display: none;
 }
 
+body .mountain .mask3 {
+  display: none;
+}
+
 @media (max-width: 1500px) and (min-width: 900px) {
   body .mountain .mountainfont .len {
     margin-left: 10vw;
