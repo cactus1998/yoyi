@@ -24,6 +24,180 @@ body {
         height: auto;
     }
 
+
+
+    .ham {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        margin-top: 50px;
+        margin-left: 50px;
+        background: #363431;
+        display: block;
+        position: fixed;
+        opacity: 0.6;
+        z-index: 999;
+        .ham-origin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .ham-bar {
+            height: 2px;
+            width: 26px;
+            position: absolute;
+            background: white;
+            margin: -1px 0 0 -13px;
+            transition: all .5s;
+        }
+
+    }
+    .ham-bar--top {
+        transform: translateY(-6px);
+    }
+    .ham-bar--bottom {
+        transform: translateY(6px);
+    }
+    #nav-toggle {
+        display: none;
+    }
+    #nav-toggle:checked~.ham .ham-bar--middle {
+        opacity: 0;
+    }
+    #nav-toggle:checked~.ham .ham-bar--top {
+        transform: rotate(-45deg);
+    }
+    #nav-toggle:checked~.ham .ham-bar--bottom {
+        transform: rotate(45deg);
+    }
+
+
+
+    
+
+    /* Nav Style */
+
+    .menu {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 5%;
+        background-image: url(../img/米色紙漿背景.jpeg);
+        /* 用 translate 把選單藏到畫面右邊去 */
+        transform: translateX(100%);
+        transition: transform .5s;
+        opacity: 0.95;
+
+        z-index: 999;
+
+        .menu-list {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+
+            li {
+                text-align: center;
+                border-bottom: 1px solid #efefef;
+                display: flex;
+
+                a {
+                    display: block;
+                    line-height: 2;
+                    font-size: 40px;
+                    font-weight: 600;
+                    font-family: "KouzanBrushFont";
+                    justify-content: space-between;
+
+                    &:hover {
+                        background: #5d5d5d;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    #nav-toggle:checked~.menu {
+        transform: none;
+    }
+
+
+    .menu-item+.menu-item {
+        margin-top: 20px;
+    }
+
+
+
+
+    // .menu {
+    //     background-image: url(../img/米色紙漿背景.jpeg);
+    //     position: fixed; //暫定
+    //     // max-height: 0px;
+    //     padding-left: 0;
+    //     // display: none;
+    //     width: 100%;
+    //     height: 100%;
+    //     opacity: 0.7;
+
+
+    //     input {
+    //         display: none;
+    //     }
+
+    //     label {
+    //         float: left;
+    //         padding-right: 50px;
+    //         line-height: 50px;
+    //         cursor: pointer;
+
+    //         img {
+    //             width: 30px;
+    //             vertical-align: middle;
+    //         }
+    //     }
+
+    //     ul {
+    //         //下拉選單效果
+    //         max-height: 0px;
+    //         overflow: hidden;
+
+    //         clear: both;
+    //         writing-mode: vertical-rl;
+    //         height: 80%;
+    //         width: 70%;
+
+    //         li {
+    //             text-align: center;
+    //             border-bottom: 1px solid #efefef;
+    //             width: 10%;
+
+    //             a {
+    //                 display: block;
+    //                 line-height: 50px;
+    //                 font-size: 35px;
+    //                 color: #5d5d5d;
+
+    //                 .word {
+    //                     font-size: 28px;
+    //                 }
+
+    //                 &:hover {
+    //                     background: #5d5d5d;
+    //                     color: #fff;
+    //                 }
+    //             }
+    //         }
+
+    //         ul {
+    //             max-height: 0;
+    //             overflow: hidden;
+    //             transition: .2s;
+    //             /* 動畫秒數 */
+    //         }
+    //     }
+    // }
+
     .overlord {
         position: relative;
         // background-color: black;
@@ -427,7 +601,7 @@ body {
         }
     }
 
-    @media (max-width: 450px) and (min-width: 414px) {
+    @media (max-width: 450px) and (min-width: 375px) {
         .overlord {
             .moonbox {
                 width: 100%;
@@ -479,66 +653,6 @@ body {
                 height: 20vh;
                 background-image: url(../img/展示台.png);
                 margin-top: -40vh;
-                // background-size: contain;
-                background-size: contain;
-                background-repeat: no-repeat;
-
-                z-index: 0;
-            }
-        }
-    }
-    @media (max-width: 414px) and (min-width: 375px) {
-        .overlord {
-            .moonbox {
-                width: 100%;
-                height: 205vh;
-                margin-top: -68vh;
-                margin-bottom: 100px;
-            }
-
-            .cloud01 {
-                width: 50%;
-                height: 50vh;
-                margin-top: -115vh;
-                margin-left: 0%;
-            }
-
-            .cloud02 {
-                width: 50%;
-                height: 50vh;
-                margin-top: -110vh;
-                margin-left: 50%;
-            }
-
-            .stoneleft {
-                position: absolute;
-                width: 15%;
-                height: 41vh;
-                margin-top: -50vh;
-                margin-left: 35%;
-            }
-
-            .stoneright {
-                position: absolute;
-                width: 15%;
-                height: 40vh;
-                margin-top: -50vh;
-                margin-left: 50%;
-            }
-
-            .fontbox {
-                position: absolute;
-                width: 100%;
-                margin-top: -90vh;
-                margin-left: -20vw;
-                font-size: 20px;
-            }
-
-            .base {
-                width: 100%;
-                height: 20vh;
-                background-image: url(../img/展示台.png);
-                margin-top: -43vh;
                 // background-size: contain;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -947,9 +1061,6 @@ body {
         .mask2 {
             display: none;
         }
-        .mask3 {
-            display: none;
-        }
 
         @media (max-width: 1500px) and (min-width: 900px) {
             .mountainfont {
@@ -1025,7 +1136,7 @@ body {
             .mountainfont {
                 width: 100%;
                 height: 100vh;
-                margin-top: -25%;
+                margin-top: -20%;
                 font-family: KouzanBrushFont;
                 position: absolute;
                 white-space: nowrap;
@@ -1064,7 +1175,7 @@ body {
             }
 
             .mask2 {
-                margin-top: 30vh;
+                margin-top: 20vh;
                 width: 150vw;
                 margin-left: 0vw;
                 display: block;
@@ -1167,7 +1278,6 @@ body {
         h1 {
             font-size: 95px;
             letter-spacing: 30px;
-
             text-align: center;
             font-weight: normal;
             color: #707070;
@@ -1258,7 +1368,7 @@ body {
                 font-size: 80px;
                 color: #707070;
                 font-family: KouzanBrushFont;
-                margin-top: -115px;
+                margin-top: -70px;
                 font-weight: normal;
                 text-align: right;
             }
@@ -1337,7 +1447,7 @@ body {
                 color: #707070;
                 font-family: KouzanBrushFont;
                 font-weight: normal;
-                margin-top: -115px;
+                margin-top: -70px;
                 text-align: left;
                 padding-left: 50px;
             }
@@ -1359,15 +1469,14 @@ body {
         .titlebox {
             height: 110px;
             margin-top: -18vh;
+
             h1 {
                 font-size: 55px;
-                
                 margin: auto;
                 letter-spacing: 5px;
             }
 
             h2 {
-
                 display: none;
             }
         }
@@ -1382,7 +1491,7 @@ body {
 
                 h1 {
                     font-size: 70px;
-                    margin-top: -100px;
+                    margin-top: -50px;
                     width: 100%;
                 }
 
@@ -1403,7 +1512,7 @@ body {
 
                 h1 {
                     font-size: 70px;
-                    margin-top: -100px;
+                    margin-top: -50px;
                 }
 
                 .font02 {
@@ -1420,16 +1529,13 @@ body {
 
             h1 {
                 font-size: 55px;
-                margin: 100px;
+                margin: auto;
                 letter-spacing: 5px;
             }
 
             h2 {
                 display: none;
             }
-        }
-        .bar{
-            margin-top: 100px;
         }
 
         .process01box {
@@ -1457,7 +1563,7 @@ body {
                     font-size: 50px;
                     margin: auto;
                     text-align: center;
-                    margin-top: -90px;
+                    margin-top: -50px;
                 }
 
                 .font01 {
@@ -1516,7 +1622,7 @@ body {
                     font-size: 50px;
                     margin: auto;
                     text-align: center;
-                    margin-top: -95px;
+                    margin-top: -50px;
                     padding-left: 0px;
                     margin-left: -30px;
                 }

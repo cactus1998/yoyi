@@ -6,6 +6,7 @@ body {
           box-sizing: border-box;
   background-image: url(../img/米色紙漿背景.jpeg);
   position: relative;
+  /* Nav Style */
 }
 
 body .box {
@@ -24,6 +25,120 @@ body .box {
 body video {
   width: 100%;
   height: auto;
+}
+
+body .ham {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  margin-top: 50px;
+  margin-left: 50px;
+  background: #363431;
+  display: block;
+  position: fixed;
+  opacity: 0.6;
+  z-index: 999;
+}
+
+body .ham .ham-origin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+body .ham .ham-bar {
+  height: 2px;
+  width: 26px;
+  position: absolute;
+  background: white;
+  margin: -1px 0 0 -13px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body .ham-bar--top {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+body .ham-bar--bottom {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+body #nav-toggle {
+  display: none;
+}
+
+body #nav-toggle:checked ~ .ham .ham-bar--middle {
+  opacity: 0;
+}
+
+body #nav-toggle:checked ~ .ham .ham-bar--top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body #nav-toggle:checked ~ .ham .ham-bar--bottom {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 5%;
+  background-image: url(../img/米色紙漿背景.jpeg);
+  /* 用 translate 把選單藏到畫面右邊去 */
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  opacity: 0.95;
+  z-index: 999;
+}
+
+body .menu .menu-list {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+body .menu .menu-list li {
+  text-align: center;
+  border-bottom: 1px solid #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .menu .menu-list li a {
+  display: block;
+  line-height: 2;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "KouzanBrushFont";
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .menu .menu-list li a:hover {
+  background: #5d5d5d;
+  color: #fff;
+}
+
+body #nav-toggle:checked ~ .menu {
+  -webkit-transform: none;
+          transform: none;
+}
+
+body .menu-item + .menu-item {
+  margin-top: 20px;
 }
 
 body .overlord {
@@ -343,7 +458,7 @@ body .inc {
   }
 }
 
-@media (max-width: 450px) and (min-width: 414px) {
+@media (max-width: 450px) and (min-width: 375px) {
   body .overlord .moonbox {
     width: 100%;
     height: 205vh;
@@ -388,57 +503,6 @@ body .inc {
     height: 20vh;
     background-image: url(../img/展示台.png);
     margin-top: -40vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 0;
-  }
-}
-
-@media (max-width: 414px) and (min-width: 375px) {
-  body .overlord .moonbox {
-    width: 100%;
-    height: 205vh;
-    margin-top: -68vh;
-    margin-bottom: 100px;
-  }
-  body .overlord .cloud01 {
-    width: 50%;
-    height: 50vh;
-    margin-top: -115vh;
-    margin-left: 0%;
-  }
-  body .overlord .cloud02 {
-    width: 50%;
-    height: 50vh;
-    margin-top: -110vh;
-    margin-left: 50%;
-  }
-  body .overlord .stoneleft {
-    position: absolute;
-    width: 15%;
-    height: 41vh;
-    margin-top: -50vh;
-    margin-left: 35%;
-  }
-  body .overlord .stoneright {
-    position: absolute;
-    width: 15%;
-    height: 40vh;
-    margin-top: -50vh;
-    margin-left: 50%;
-  }
-  body .overlord .fontbox {
-    position: absolute;
-    width: 100%;
-    margin-top: -90vh;
-    margin-left: -20vw;
-    font-size: 20px;
-  }
-  body .overlord .base {
-    width: 100%;
-    height: 20vh;
-    background-image: url(../img/展示台.png);
-    margin-top: -43vh;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 0;
@@ -787,10 +851,6 @@ body .mountain .mask2 {
   display: none;
 }
 
-body .mountain .mask3 {
-  display: none;
-}
-
 @media (max-width: 1500px) and (min-width: 900px) {
   body .mountain .mountainfont .len {
     margin-left: 10vw;
@@ -849,7 +909,7 @@ body .mountain .mask3 {
   body .mountain .mountainfont {
     width: 100%;
     height: 100vh;
-    margin-top: -25%;
+    margin-top: -20%;
     font-family: KouzanBrushFont;
     position: absolute;
     white-space: nowrap;
@@ -881,7 +941,7 @@ body .mountain .mask3 {
     display: none;
   }
   body .mountain .mask2 {
-    margin-top: 30vh;
+    margin-top: 20vh;
     width: 150vw;
     margin-left: 0vw;
     display: block;
@@ -1079,7 +1139,7 @@ body .mountain .mask3 {
   font-size: 80px;
   color: #707070;
   font-family: KouzanBrushFont;
-  margin-top: -115px;
+  margin-top: -70px;
   font-weight: normal;
   text-align: right;
 }
@@ -1164,7 +1224,7 @@ body .mountain .mask3 {
   color: #707070;
   font-family: KouzanBrushFont;
   font-weight: normal;
-  margin-top: -115px;
+  margin-top: -70px;
   text-align: left;
   padding-left: 50px;
 }
@@ -1200,7 +1260,7 @@ body .mountain .mask3 {
   }
   .process .process01box .fontbox_01 h1 {
     font-size: 70px;
-    margin-top: -100px;
+    margin-top: -50px;
     width: 100%;
   }
   .process .process01box .fontbox_01 .font01 {
@@ -1215,7 +1275,7 @@ body .mountain .mask3 {
   }
   .process .process02box .fontbox_02 h1 {
     font-size: 70px;
-    margin-top: -100px;
+    margin-top: -50px;
   }
   .process .process02box .fontbox_02 .font02 {
     font-size: 20px;
@@ -1228,14 +1288,11 @@ body .mountain .mask3 {
   }
   .process .titlebox h1 {
     font-size: 55px;
-    margin: 100px;
+    margin: auto;
     letter-spacing: 5px;
   }
   .process .titlebox h2 {
     display: none;
-  }
-  .process .bar {
-    margin-top: 100px;
   }
   .process .process01box {
     -webkit-box-orient: vertical;
@@ -1264,7 +1321,7 @@ body .mountain .mask3 {
     font-size: 50px;
     margin: auto;
     text-align: center;
-    margin-top: -90px;
+    margin-top: -50px;
   }
   .process .process01box .fontbox_01 .font01 {
     margin: auto;
@@ -1318,7 +1375,7 @@ body .mountain .mask3 {
     font-size: 50px;
     margin: auto;
     text-align: center;
-    margin-top: -95px;
+    margin-top: -50px;
     padding-left: 0px;
     margin-left: -30px;
   }
