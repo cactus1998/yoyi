@@ -156,6 +156,7 @@ body {
                     @media (max-width: 1200px) and (min-width: 768px) {
                         font-size: 30px;
                     }
+
                     @media (max-width:768px) and (min-width: 375px) {
                         font-size: 25px;
                     }
@@ -173,7 +174,7 @@ body {
             //     transform: translate(-50%, -50%);
             // }
         }
-    
+
     }
 
 
@@ -314,6 +315,8 @@ body {
         z-index: 0;
     }
 
+
+
     .fontbox {
         position: absolute;
         width: 100%;
@@ -453,7 +456,7 @@ body {
             width: 100%;
 
             margin-top: -90vh;
-            font-size: 30px;
+            font-size: 26px;
         }
 
         .base {
@@ -515,7 +518,7 @@ body {
             width: 100%;
             margin-top: -110vh;
             margin-left: -20vw;
-            font-size: 30px;
+            font-size: 24px;
         }
 
         .base {
@@ -577,7 +580,7 @@ body {
             width: 100%;
             margin-top: -75vh;
             margin-left: -20vw;
-            font-size: 30px;
+            font-size: 20px;
         }
 
         .base {
@@ -638,7 +641,7 @@ body {
             width: 100%;
             margin-top: -90vh;
             margin-left: -20vw;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .base {
